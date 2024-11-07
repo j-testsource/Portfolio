@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jay's Skills</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #222;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .menu-toggle {
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        nav a.active {
+            border-bottom: 2px solid #fff;
+        }
+        .skills-container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+        .skills-container h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+        .skills-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .skill-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .skill-card h3 {
+            font-size: 24px;
+            color: #444;
+            margin-bottom: 15px;
+        }
+        .skill-bar {
+            background: #f1f1f1;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .skill-level {
+            height: 12px;
+            border-radius: 5px;
+            background-color: #5f5be1;
+            transition: width 0.4s ease;
+        }
+        .soft-skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .soft-skills ul li {
+            font-size: 18px;
+            margin: 8px 0;
+            color: #666;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .social-icons a {
+            color: #5f5be1;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Jay</a>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="downloads.html">Downloads</a>
+            <a href="#" class="active">Skills</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="skills-container">
+        <h1>My Skills</h1>
+
+        <div class="skills-section">
+            
+            <div class="skill-card">
+                <h3>Technical Skills</h3>
+                <p>JavaScript</p>
+                <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+                <p>HTML AND CSS</p>
+                <div class="skill-bar"><div class="skill-level" style="width: 95%;"></div></div>
+                <p>JRPG Maker</p>
+                <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+                <p>FL Studio</p>
+                <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+            </div>
+
+            
+            <div class="skill-card soft-skills">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Creative Problem Solving</li>
+                    <li>Project Management</li>
+                    <li>Effective Communication</li>
+                    <li>Time Management</li>
+                    <li>Team Collaboration</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
