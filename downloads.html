@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jay's Downloads</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Jay</a>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="#" class="active">Downloads</a>
+            <a href="skills.html">Skills</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="downloads">
+        <h1>Download My Projects</h1>
+        <p>Here, you'll find links to my latest indie games and projects. Click to download and explore!</p>
+        
+        <div class="download-list">
+            
+            <div class="download-item">
+                <img src="game1.jpg" alt="Game 1 Thumbnail">
+                <div class="download-info">
+                    <h3>Adventure Quest</h3>
+                    <p>An exciting adventure game where you journey through mystical lands to uncover hidden treasures.</p>
+                    <a href="downloads/adventure-quest.zip" class="btn">Download</a>
+                </div>
+            </div>
+
+            
+            <div class="download-item">
+                <img src="game2.jpg" alt="Game 2 Thumbnail">
+                <div class="download-info">
+                    <h3>Pixel Run</h3>
+                    <p>A fast-paced platformer with retro-style graphics. Run, jump, and survive as long as you can!</p>
+                    <a href="downloads/pixel-run.zip" class="btn">Download</a>
+                </div>
+            </div>
+
+            
+            <div class="download-item">
+                <img src="game3.jpg" alt="Game 3 Thumbnail">
+                <div class="download-info">
+                    <h3>Mystic Puzzle</h3>
+                    <p>Challenge your mind with this puzzle game filled with brain-teasing levels and unique mechanics.</p>
+                    <a href="downloads/mystic-puzzle.zip" class="btn">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
