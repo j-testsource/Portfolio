@@ -14,28 +14,62 @@
         }
 
         header {
+            background-color: #222;
+            padding: 1em;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
         }
 
         .logo {
-            text-decoration: none;
-            color: white;
+            color: #fff;
             font-size: 24px;
+            text-decoration: none;
+        }
+
+        .menu-toggle {
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            display: none;
         }
 
         nav a {
+            color: #fff;
             text-decoration: none;
-            color: white;
-            margin: 0 10px;
+            margin-left: 20px;
+            font-size: 18px;
         }
 
         nav a.active {
-            font-weight: bold;
+            border-bottom: 2px solid #fff;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav a {
+                margin: 10px 0;
+                font-size: 20px;
+            }
+        }
+
+        .active-menu {
+            display: flex !important;
         }
 
         .downloads {
@@ -158,7 +192,7 @@
     <script>
         function toggleMenu() {
             const navMenu = document.getElementById('nav-menu');
-            navMenu.classList.toggle('active');
+            navMenu.classList.toggle('active-menu');
         }
     </script>
 </body>
