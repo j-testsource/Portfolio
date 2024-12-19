@@ -6,9 +6,67 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Portfolio Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #222;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .menu-toggle {
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        nav a.active {
+            border-bottom: 2px solid #fff;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            nav a {
+                margin: 10px 0;
+                font-size: 20px;
+            }
+        }
+        .active-menu {
+            display: flex !important;
+        }
+    </style>
 </head>
 <body>
-   <header>
+    <header>
         <a href="#" class="logo">Jay</a>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <nav id="nav-menu">
@@ -26,7 +84,7 @@
         <div class="home-content">
             <h1>Hello, I'm <span>Jay</span></h1>
             <h3>I'm an</h3>
-            <p>Indie developer who aspires to be the foundation of an era reaborn.</p>
+            <p>Indie developer who aspires to be the foundation of an era reborn.</p>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -36,29 +94,11 @@
             <a href="#" class="btn">Suggest Ideas!</a>
         </div>
     </section>
-
     <script>
         function toggleMenu() {
             const navMenu = document.getElementById('nav-menu');
-            const menuToggle = document.querySelector('.menu-toggle');
-            
-            
-            navMenu.classList.toggle('active');
-            
-            
-            menuToggle.classList.toggle('open');
+            navMenu.classList.toggle('active-menu');
         }
-
-       
-        const navLinks = document.querySelectorAll('#nav-menu a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                const navMenu = document.getElementById('nav-menu');
-                const menuToggle = document.querySelector('.menu-toggle');
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('open');
-            });
-        });
     </script>
 </body>
 </html>
