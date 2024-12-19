@@ -6,6 +6,102 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Jay's Downloads</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .logo {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+        }
+
+        nav a.active {
+            font-weight: bold;
+        }
+
+        .downloads {
+            padding: 20px;
+        }
+
+        .download-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .download-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .download-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .download-item img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .download-info {
+            flex: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+        }
+
+        .social-icons a:hover {
+            color: #555;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,38 +119,34 @@
     <section class="downloads">
         <h1>Inspiring Indie Games</h1>
         <p>Here, you'll find links to a couple of the indie games that have not only inspired me, but also have some of my work included within them.</p>
-        
+
         <div class="download-list">
-            
             <div class="download-item">
                 <img src="ENRI.jpg" alt="Game 1 Thumbnail">
                 <div class="download-info">
                     <h3>PURGATORY</h3>
-                    <p>A classic JRPG indie horror game where you traverse an unkown yet familiar factory. You must solve puzzles, as well as keep yourself hidden from the mysterious creatures that lurk within the facility.</p>
+                    <p>A classic JRPG indie horror game where you traverse an unknown yet familiar factory. You must solve puzzles, as well as keep yourself hidden from the mysterious creatures that lurk within the facility.</p>
                     <a href="downloads/adventure-quest.zip" class="btn">Download</a>
                 </div>
             </div>
 
-            
             <div class="download-item">
                 <img src="FLOW.jpg" alt="Game 2 Thumbnail">
                 <div class="download-info">
                     <h3>.FLOW</h3>
-                    <p>An obscure fan game title of the yume series. You are lost in a world between dreams and reality, struggling to figure out who it is you are.</p>
+                    <p>An obscure fan game title of the Yume series. You are lost in a world between dreams and reality, struggling to figure out who it is you are.</p>
                     <a href="downloads/pixel-run.zip" class="btn">Download</a>
                 </div>
             </div>
 
-            
             <div class="download-item">
                 <img src="umineko.jpg" alt="Game 3 Thumbnail">
                 <div class="download-info">
                     <h3>COMING SOON</h3>
-                    
                 </div>
             </div>
         </div>
-        
+
         <div class="social-icons">
             <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
